@@ -11,7 +11,7 @@ export default function Hero() {
                     <div className="flex flex-col text-left mb-4 lg:mb-12 xl:mb-16">
                         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">Studio Quality</h1>
                         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">Photos, using AI</h1>
-                        <div className="flex gap-4">
+                        <div className="flex gap-2 lg:gap-4">
                             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">within</h1>
                             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">
                                 <AnimatedGradiantText variant="dark" text="seconds"/>
