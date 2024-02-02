@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <div>
+        <div className="w-full">
             <div className="max-w-screen-2xl mx-auto px-12 py-8">
                 <nav className="flex justify-between items-center">
                     <div className="text-white text-4xl font-semibold">Insta Photo AI

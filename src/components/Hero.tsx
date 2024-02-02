@@ -5,7 +5,7 @@ import girlWithFrame from "../../public/girlWithFrame.png"
 
 export default function Hero() {
     return (
-        <div>
+        <div className="w-full">
             <div className="grid grid-cols-8 md:grid-cols-2 gap-4 max-w-screen-2xl mx-auto px-12">
                 <div className="col-span-3 md:col-span-1 flex flex-col justify-center">
                     <div className="flex flex-col text-left mb-4 lg:mb-12 xl:mb-16">
