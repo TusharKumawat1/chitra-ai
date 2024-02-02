@@ -17,7 +17,7 @@ export default function Community() {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-1 p-8 mx-auto">
+                <div className="col-span-1 p-8 mx-auto my-auto">
                     <div className="mb-8">
                         <AnimatedGradiantText text="10.2M+" variant="dark"/>
                         <p className="font-extralight text-sm">ACTIVE ACCOUNTS</p>

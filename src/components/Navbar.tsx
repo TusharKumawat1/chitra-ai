@@ -7,7 +7,7 @@ export default function Navbar() {
                 <nav className="flex justify-between items-center">
                     <div className="text-white text-4xl font-semibold">Insta Photo AI
                     </div>
-                    <div className="flex gap-12 text-lg font-normal">
+                    <div className="flex gap-12 text-base font-light lg:text-lg">
                         <Link href={"/"}>Learn</Link>
                         <Link href={"/"}>Build</Link>
                         <Link href={"/"}>Products</Link>

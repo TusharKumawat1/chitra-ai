@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="w-full">
             <div className="grid grid-cols-8 md:grid-cols-2 gap-4 max-w-screen-2xl mx-auto px-12">
                 <div className="col-span-3 md:col-span-1 flex flex-col justify-center">
-                    <div className="flex flex-col text-left mb-4 lg:mb-12 xl:mb-16">
+                    <div className="flex flex-col text-left mb-4 lg:mb-8 xl:mb-12">
                         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">Studio Quality</h1>
                         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">Photos, using AI</h1>
                         <div className="flex gap-2 lg:gap-4">
@@ -18,11 +18,21 @@ export default function Hero() {
                             </h1>
                         </div>
                     </div>
-                    <div className="mb-16 lg:mb-32 xl:mb-32">
-                        <p className="text-white max-w-screen-sm font-extralight text-sm lg:text-lg">
-                            In the realm of creativity, technology has become a powerful ally for artists, writers,
-                            designers, and creators of all kinds. Artificially intelligent (AI) tools have emerged as
-                            valuable companions, assisting naturally creative humans in their creative processes.
+                    <div className="mb-16 lg:mb-24 xl:mb-24">
+                        <p className="text-white max-w-screen-sm font-extralight text-sm lg:text-base">
+                            In the realm of creativity, technology has become a
+                        </p>
+                        <p className="text-white max-w-screen-sm font-extralight text-sm lg:text-base">
+                            powerful ally for artists, writers, designers, and creators of
+                        </p>
+                        <p className="text-white max-w-screen-sm font-extralight text-sm lg:text-base">
+                            all kinds. Artificially intelligent (AI) tools have emerged as
+                        </p>
+                        <p className="text-white max-w-screen-sm font-extralight text-sm lg:text-base">
+                            valuable companions, assisting naturally creative humans in
+                        </p>
+                        <p className="text-white max-w-screen-sm font-extralight text-sm lg:text-base">
+                            their creative processes.
                         </p>
                     </div>
                     <div className="mb-2 lg:mb-8">
