@@ -17,7 +17,7 @@ export default function Community() {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-1 p-8">
+                <div className="col-span-1 p-8 mx-auto">
                     <div className="mb-8">
                         <AnimatedGradiantText text="10.2M+" variant="dark"/>
                         <p className="font-extralight text-sm">ACTIVE ACCOUNTS</p>
@@ -38,7 +38,7 @@ export default function Community() {
 
 const AnimatedGradiantText = ({text, variant}: { text: string, variant: string }) => {
     const variantDark = (
-        <p className="text-6xl md:text-7xl font-medium bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.600),theme(colors.green.100),theme(colors.green.400),theme(colors.fuchsia.400),theme(colors.sky.400),theme(colors.indigo.100),theme(colors.indigo.400))] bg-[length:200%_auto] animate-gradient">{text}</p>
+        <p className="text-6xl md:text-7xl font-medium bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.600),theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.green.400),theme(colors.sky.400),theme(colors.indigo.100),theme(colors.indigo.400))] bg-[length:200%_auto] animate-gradient">{text}</p>
     )
     const variantLight = (
         <p className="text-xl lg:text-3xl font-semibold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.green.200),theme(colors.green.100),theme(colors.red.200),theme(colors.fuchsia.200),theme(colors.red.200),theme(colors.green.100),theme(colors.green.200))] bg-[length:200%_auto] animate-gradient">{text}</p>
