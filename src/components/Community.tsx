@@ -1,9 +1,10 @@
 export default function Community() {
     return (
-        <div className="w-full">
+        <div className="w-full my-24">
             <div className="grid grid-cols-2 gap-32 max-w-screen-2xl mx-auto px-24 py-12">
                 <div className="col-span-1 p-8">
-                    <h1 className="text-white text-4xl">Join a community of millions.</h1>
+                    <h1 className="text-white text-4xl">Join a community</h1>
+                    <h1 className="text-white text-4xl">of millions.</h1>
                     <div className="bg-[#19161C] rounded-lg p-8 mt-8">
                         <h2 className="text-2xl font-light mb-2">Create stunning visual in seconds</h2>
                         <p className="font-extralight mb-4">Generating innovative ideas is a crucial aspect of any

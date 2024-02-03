@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Community from "@/components/Community";
-import Gallery from "@/components/Gallery";
+import Gallery from "@/components/Gallery/Gallery";
 import Footer from "@/components/Footer";
 import Hero2 from "@/components/Hero2";
 
