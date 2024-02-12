@@ -1,13 +1,17 @@
+'use client';
 import Image from "next/image";
 import girl from "../../public/girl.png"
 import frame from "../../public/frame.png"
 import girlWithFrame from "../../public/girlWithFrame.png"
+import React from "react";
+import Stars from "@/components/Stars";
 
 export default function Hero() {
     return (
         <div className="w-full">
-            <div className="grid grid-cols-8 md:grid-cols-2 gap-4 max-w-screen-2xl mx-auto px-12">
-                <div className="col-span-3 md:col-span-1 flex flex-col justify-center">
+            <Stars />
+            <div className="grid grid-cols-8 md:grid-cols-2 gap-4 max-w-screen-2xl mx-auto px-12 h-full xl:my-12">
+                <div className="col-span-3 md:col-span-1 z-10 py-8 flex flex-col justify-center">
                     <div className="flex flex-col text-left mb-4 lg:mb-8 xl:mb-12">
                         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">Studio Quality</h1>
                         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">Photos, using AI</h1>
@@ -40,14 +44,20 @@ export default function Hero() {
                         <AnimatedGradiantText variant="light" text="Generated Image or just a Selfie."/>
                     </div>
                     <div>
-                        <button className="bg-[#D2FF3A] text-black lg:text-xl font-semibold px-8 py-4 rounded-lg">Signup
+                        <button
+                            className="bg-[#D2FF3A] text-black lg:text-xl font-semibold px-8 py-4 rounded-lg">Signup
                             and Get
                             10 free Photos
                         </button>
                     </div>
                 </div>
                 <div className="col-span-5 md:col-span-1">
-                    <Box completeImage={true}/>
+                    <div className="hidden xl:inline-flex">
+                        <Box completeImage={false}/>
+                    </div>
+                    <div className="xl:hidden my-auto">
+                        <Box completeImage={true}/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,14 +81,11 @@ const Box = ({completeImage}: { completeImage: Boolean }) => {
     )
 
     const distributedBox = (
-        <div className="h-[820px] w-[807px]">
-            <Image className="absolute z-10 right-0 h-[820px] w-[456px]" src={frame} alt={"frame"}/>
-            <Image className="absolute z-10 h-[1100px] w-[1039px] right-0 mr-[-55px] mt-[-127px]" src={girl}
-                   alt={"girl"}/>
+        <div className="pl-[50%] h-full">
+            <Image className="z-0" src={frame} alt={"frame"}/>
+            <Image className="z-10 -mt-[140%] -ml-[50%] scale-[2.26]" src={girl} alt={"girl"}/>
         </div>
     );
 
     return completeImage ? completeBox : distributedBox;
 };
-
-

@@ -2,7 +2,7 @@ export default function Community() {
     return (
         <div className="w-full my-24">
             <div className="grid grid-cols-2 gap-32 max-w-screen-2xl mx-auto px-24 py-12">
-                <div className="col-span-1 p-8">
+                <div className="col-span-1 p-8 z-10">
                     <h1 className="text-white text-4xl">Join a community</h1>
                     <h1 className="text-white text-4xl">of millions.</h1>
                     <div className="bg-[#19161C] rounded-lg p-8 mt-8">
@@ -18,7 +18,7 @@ export default function Community() {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-1 p-8 mx-auto my-auto">
+                <div className="col-span-1 p-8 mx-auto my-auto z-10">
                     <div className="mb-8">
                         <AnimatedGradiantText text="10.2M+" variant="dark"/>
                         <p className="font-extralight text-sm">ACTIVE ACCOUNTS</p>
