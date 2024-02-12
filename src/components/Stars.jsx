@@ -57,7 +57,7 @@ export default function Stars(){
                 },
                 links: {
                     color: "#ffffff",
-                    distance: 10,
+                    distance: 100,
                     enable: true,
                     opacity: 0.5,
                     width: 1,
@@ -76,7 +76,7 @@ export default function Stars(){
                     density: {
                         enable: true,
                     },
-                    value: 300,
+                    value: 100,
                 },
                 opacity: {
                     value: 0.6,
