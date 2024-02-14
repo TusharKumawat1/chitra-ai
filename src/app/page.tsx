@@ -4,12 +4,16 @@ import Community from "@/components/Community";
 import Gallery from "@/components/Gallery/Gallery";
 import Footer from "@/components/Footer";
 import Hero2 from "@/components/Hero2";
+import {SlideDown} from "@/animations/animations";
 
 export default function Home() {
     return (
         <main className="p-0 m-0">
-            <Navbar/>
-            <div className="absolute -z-10 -top-[800px] -left-[1000px] h-[1600px] w-[2000px] bg-gradient-radial from-indigo-600 via-black to-black"></div>
+            <SlideDown delay={1}>
+                <Navbar/>
+            </SlideDown>
+            <div
+                className="absolute -z-10 -top-[800px] -left-[1000px] h-[1600px] w-[2000px] bg-gradient-radial from-indigo-600 via-black to-black"></div>
             <Hero/>
             <Hero2/>
             <div className="py-16" style={{

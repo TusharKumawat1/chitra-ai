@@ -1,11 +1,12 @@
-import { useEffect, useMemo, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
+import {useEffect, useMemo, useState} from "react";
+import Particles, {initParticlesEngine} from "@tsparticles/react";
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+import {loadFull} from "tsparticles";
+import {FadeIn} from "@/animations/animations"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 // import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
-export default function Stars(){
+export default function Stars() {
     const [init, setInit] = useState(false);
 
     // this should be run only once per application lifetime
@@ -85,7 +86,7 @@ export default function Stars(){
                     type: "star",
                 },
                 size: {
-                    value: { min: 1, max: 2 },
+                    value: {min: 1, max: 2},
                 },
             },
             detectRetina: true,
@@ -95,11 +96,13 @@ export default function Stars(){
 
     if (init) {
         return (
-            <Particles
-                id="tsparticles"
-                particlesLoaded={particlesLoaded}
-                options={options}
-            />
+            <FadeIn delay={1.5}>
+                <Particles
+                    id="tsparticles"
+                    particlesLoaded={particlesLoaded}
+                    options={options}
+                />
+            </FadeIn>
         );
     }
 
