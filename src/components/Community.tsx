@@ -14,9 +14,14 @@ export default function Community() {
                     <SlideUp delay={0.5}>
                         <div className="bg-[#19161C] rounded-lg p-8 mt-8">
                             <h2 className="text-2xl font-light mb-2">Create stunning visual in seconds</h2>
-                            <p className="font-extralight mb-4">Generating innovative ideas is a crucial aspect of any
-                                creative endeavor. AI tools can help spark inspiration by analyzing vast amounts of
-                                data</p>
+                            <p className="font-extralight mb-4">
+                                Embrace innovation with AI tools! Dive into uncharted territories, ignite your
+                                creativity.
+                            </p>
+                            <p className="font-extralight mb-4">
+                                Generating innovative ideas is a crucial aspect of any creator. Our AI tools can help
+                                spark inspiration by providing pre-made prompts and styles
+                            </p>
                             <div className="flex justify-between bg-[#0A0A0A] rounded-3xl">
                                 <input type="text"
                                        className="bg-transparent py-4 px-8 w-full font-light text-sm focus:outline-none"
@@ -31,16 +36,16 @@ export default function Community() {
                     <SlideLeft delay={0.75}>
                         <div>
                             <div className="mb-8">
-                                <AnimatedGradiantText text="10.2M+" variant="dark"/>
+                                <AnimatedGradiantText text="10,000+" variant="dark"/>
                                 <p className="font-extralight text-sm">ACTIVE ACCOUNTS</p>
                             </div>
                             <div className="mb-8">
-                                <AnimatedGradiantText text="300+" variant="dark"/>
-                                <p className="font-extralight text-sm">PROJECTS</p>
+                                <AnimatedGradiantText text="50,000+" variant="dark"/>
+                                <p className="font-extralight text-sm">IMAGES GENERATED</p>
                             </div>
                             <div>
-                                <AnimatedGradiantText text="1000+" variant="dark"/>
-                                <p className="font-extralight text-sm">TOPICS</p>
+                                <AnimatedGradiantText text="100+" variant="dark"/>
+                                <p className="font-extralight text-sm">PRE-MADE STYLES</p>
                             </div>
                         </div>
                     </SlideLeft>

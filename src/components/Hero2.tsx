@@ -52,8 +52,9 @@ export default function Hero2() {
                         <SlideUp delay={1.4}>
                             <button className="h-20 text-black text-3xl w-full bg-[#D2FF3A] rounded-3xl">
                                 <div className="flex justify-center items-center">
-                                    <p className="mr-2">Try Free</p>
-                                    <GoArrowUpRight/>
+                                    {/*<p className="mr-2">Try Free</p>*/}
+                                    {/*<GoArrowUpRight/>*/}
+                                    Coming Soon...
                                 </div>
                             </button>
                         </SlideUp>

@@ -2,6 +2,8 @@ import Image from "next/image";
 import "./Gallery.css";
 
 export default function Gallery() {
+    const images1 = ["/anime_girl_cat.png", "/girl_beach.png", "/girl_cyberpunk.png", "/man_business.png"];
+    const images2 = ["/bride.png", "/girl_snow.png", "/john_snow.png", "/cat_painting.png"];
     return (
         <div className="my-20">
             <div className="max-w-screen-2xl mx-auto px-12 mb-12">
@@ -9,15 +11,15 @@ export default function Gallery() {
             </div>
             <div className="outer_scroll">
                 <div className="inner_scroll primary flex">
-                    <Images/>
+                    <Images images={images1}/>
                     <div className="ml-[20px]">
-                        <Images/>
+                        <Images images={images2}/>
                     </div>
                     <div className="ml-[20px]">
-                        <Images/>
+                        <Images images={images1}/>
                     </div>
                     <div className="ml-[20px]">
-                        <Images/>
+                        <Images images={images2}/>
                     </div>
                 </div>
             </div>
@@ -47,19 +49,19 @@ const ImageCard = ({src, alt, variant}: { src: string, alt: string, variant: num
     return variant === 1 ? variant1 : variant === 2 ? variant2 : variant === 3 ? variant3 : null;
 }
 
-const Images = () => {
+const Images = ({images}: {images: string[]}) => {
     return (
         <div className="flex">
             <ImageCard
-                src="https://images.unsplash.com/photo-1682687218904-de46ed992b58?q=80&w=2143&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={images[0]}
                 alt="Image1"
                 variant={1}
             />
             <div className="ml-[20px]">
                 <div className="mb-[20px]">
                     <ImageCard
-                        src="https://images.unsplash.com/photo-1682687218904-de46ed992b58?q=80&w=2143&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Image1"
+                        src={images[1]}
+                        alt="Image2"
                         variant={2}
                     />
                 </div>
@@ -73,8 +75,8 @@ const Images = () => {
             </div>
             <div className="ml-[20px]">
                 <ImageCard
-                    src="https://images.unsplash.com/photo-1682687218904-de46ed992b58?q=80&w=2143&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Image1"
+                    src={images[2]}
+                    alt="Image3"
                     variant={3}
                 />
             </div>
@@ -88,8 +90,8 @@ const Images = () => {
                 </div>
                 <div className="mt-[20px]">
                     <ImageCard
-                        src="https://images.unsplash.com/photo-1682687218904-de46ed992b58?q=80&w=2143&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Image1"
+                        src={images[3]}
+                        alt="Image4"
                         variant={2}
                     />
                 </div>

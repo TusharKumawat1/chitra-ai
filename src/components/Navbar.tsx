@@ -5,7 +5,7 @@ export default function Navbar() {
         <div className="w-full">
             <div className="max-w-screen-2xl mx-auto px-12 py-8">
                 <nav className="flex justify-between items-center">
-                    <div className="text-white text-4xl font-semibold">Insta Photo AI
+                    <div className="text-white text-4xl font-semibold">Chitra AI
                     </div>
                     <div className="flex gap-12 text-base font-light lg:text-lg">
                         <Link href={"/"}>Learn</Link>

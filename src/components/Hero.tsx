@@ -6,6 +6,7 @@ import girlWithFrame from "../../public/girlWithFrame.png"
 import React from "react";
 import Stars from "@/components/Stars";
 import {FadeIn, SlideLeft, SlideUp} from "@/animations/animations";
+import Link from "next/link";
 
 export default function Hero() {
     return (
@@ -16,13 +17,16 @@ export default function Hero() {
                     <FadeIn delay={0.2}>
                         <div>
                             <div className="flex flex-col text-left mb-4 lg:mb-8 xl:mb-12">
-                                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">Studio Quality</h1>
-                                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">Photos, using AI</h1>
+                                <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium">Simple, Freemium</h1>
+                                <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium">AI Image & Video
+                                    Generation</h1>
                                 <div className="flex gap-2 lg:gap-4">
-                                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">within</h1>
-                                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">
-                                        <AnimatedGradiantText variant="dark" text="seconds"/>
+                                    <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium">
+                                        <AnimatedGradiantText variant="dark" text="within seconds"/>
                                     </h1>
+                                    {/*<h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">*/}
+                                    {/*    <AnimatedGradiantText variant="dark" text="seconds"/>*/}
+                                    {/*</h1>*/}
                                 </div>
                             </div>
                             <div className="mb-16 lg:mb-24 xl:mb-24">
@@ -47,15 +51,16 @@ export default function Hero() {
                     <SlideUp delay={0.5}>
                         <div>
                             <div className="mb-2 lg:mb-8">
-                                <AnimatedGradiantText variant="light" text="Create Your Photo with AI"/>
-                                <AnimatedGradiantText variant="light" text="Generated Image or just a Selfie."/>
+                                <AnimatedGradiantText variant="light" text="Create Your Photo with Chitra AI"/>
+                                <AnimatedGradiantText variant="light" text="Always Free AI tools with 100% Privacy"/>
                             </div>
                             <div>
-                                <button
-                                    className="bg-[#D2FF3A] text-black lg:text-xl font-semibold px-8 py-4 rounded-lg">Signup
-                                    and Get
-                                    10 free Photos
-                                </button>
+                                <Link href={"https://instaphotoai.com"} target="_blank">
+                                    <button
+                                        className="bg-[#D2FF3A] text-black lg:text-xl font-semibold px-8 py-4 rounded-lg">
+                                        Try our latest app
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </SlideUp>
