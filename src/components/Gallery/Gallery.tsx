@@ -6,8 +6,8 @@ export default function Gallery() {
     const images2 = ["/bride.png", "/girl_snow.png", "/john_snow.png", "/cat_painting.png"];
     return (
         <div className="my-20">
-            <div className="max-w-screen-2xl mx-auto px-12 mb-12">
-                <h1 className="text-4xl ">Join Through Art of community</h1>
+            <div className="max-w-screen-2xl mx-auto px-4 md:px-12 mb-4 md:mb-12">
+                <h1 className="text-2xl md:text-4xl">Join Through Art of community</h1>
             </div>
             <div className="outer_scroll">
                 <div className="inner_scroll primary flex">

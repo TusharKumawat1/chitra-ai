@@ -9,11 +9,16 @@ import {SlideDown} from "@/animations/animations";
 export default function Home() {
     return (
         <main className="p-0 m-0">
-            <SlideDown delay={1}>
-                <Navbar/>
-            </SlideDown>
+            <div className="hidden md:block">
+                <SlideDown delay={1}>
+                    <Navbar/>
+                </SlideDown>
+            </div>
+            <div className="md:hidden"><Navbar /></div>
             <div
-                className="absolute -z-10 -top-[800px] -left-[1000px] h-[1600px] w-[2000px] bg-gradient-radial from-indigo-600 via-black to-black"></div>
+                className="hidden lg:inline-flex absolute -z-10 -top-[800px] -left-[1000px] h-[1600px] w-[2000px] bg-gradient-radial from-indigo-600 via-black to-black"
+            >
+            </div>
             <Hero/>
             <Hero2/>
             <div className="py-16" style={{

@@ -2,13 +2,13 @@ import {FadeIn, SlideLeft, SlideUp} from "@/animations/animations";
 
 export default function Community() {
     return (
-        <div className="w-full my-24">
-            <div className="grid grid-cols-2 gap-32 max-w-screen-2xl mx-auto px-24 py-12">
-                <div className="col-span-1 p-8 z-10">
+        <div className="w-full md:my-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-32 max-w-screen-2xl mx-auto px-4 md:px-24 py-12">
+                <div className="col-span-1 px-4 md:p-8 z-10">
                     <FadeIn delay={0.25}>
                         <div>
-                            <h1 className="text-white text-4xl">Join a community</h1>
-                            <h1 className="text-white text-4xl">of millions.</h1>
+                            <h1 className="text-white text-2xl md:text-4xl">Join a community</h1>
+                            <h1 className="text-white text-2xl md:text-4xl">of millions.</h1>
                         </div>
                     </FadeIn>
                     <SlideUp delay={0.5}>

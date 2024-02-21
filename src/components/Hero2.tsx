@@ -8,10 +8,10 @@ import {SlideDown, SlideLeft, SlideRight, SlideUp} from "@/animations/animations
 export default function Hero2() {
     return (
         <div className="w-full my-16 xl:mt-40">
-            <div className="max-w-screen-2xl mx-auto px-12">
-                <div className="grid grid-cols-3 gap-4">
-                    <div className="flex col-span-2 z-10">
-                        <div className="mr-4">
+            <div className="max-w-screen-2xl mx-auto px-4 md:px-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="flex col-span-1 md:col-span-2 z-10">
+                        <div className="mr-4 hidden xl:inline-flex">
                             <SlideRight delay={0.2}>
                                 <Image src={Subtract} alt="parrotEye"/>
                             </SlideRight>
@@ -26,7 +26,7 @@ export default function Hero2() {
                                     </div>
                                 </div>
                             </SlideDown>
-                            <div className="-ml-[27%]">
+                            <div className="xl:-ml-[27%]">
                                 <SlideUp delay={0.8}>
                                     <div className="h-40 z-10 bg-[#6843EC] p-4 rounded-3xl">
                                         <h1 className="text-2xl ml-4 mb-4 max-w-[400px]">We have the best AI Image
