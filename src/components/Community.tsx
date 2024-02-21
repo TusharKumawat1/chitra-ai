@@ -1,17 +1,18 @@
 import {FadeIn, SlideLeft, SlideUp} from "@/animations/animations";
+import React from "react";
 
 export default function Community() {
     return (
         <div className="w-full md:my-24">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-32 max-w-screen-2xl mx-auto px-4 md:px-24 py-12">
                 <div className="col-span-1 px-4 md:p-8 z-10">
-                    <FadeIn delay={0.25}>
+                    <FadeInSection delay={0.25}>
                         <div>
                             <h1 className="text-white text-2xl md:text-4xl">Join a community</h1>
                             <h1 className="text-white text-2xl md:text-4xl">of millions.</h1>
                         </div>
-                    </FadeIn>
-                    <SlideUp delay={0.5}>
+                    </FadeInSection>
+                    <SlideUpSection delay={0.5}>
                         <div className="bg-[#19161C] rounded-lg p-8 mt-8">
                             <h2 className="text-2xl font-light mb-2">Create stunning visual in seconds</h2>
                             <p className="font-extralight mb-4">
@@ -30,10 +31,10 @@ export default function Community() {
                                 </button>
                             </div>
                         </div>
-                    </SlideUp>
+                    </SlideUpSection>
                 </div>
                 <div className="col-span-1 p-8 mx-auto my-auto z-10">
-                    <SlideLeft delay={0.75}>
+                    <SlideLeftSection delay={0.75}>
                         <div>
                             <div className="mb-8">
                                 <AnimatedGradiantText text="10,000+" variant="dark"/>
@@ -48,7 +49,7 @@ export default function Community() {
                                 <p className="font-extralight text-sm">PRE-MADE STYLES</p>
                             </div>
                         </div>
-                    </SlideLeft>
+                    </SlideLeftSection>
                 </div>
             </div>
         </div>
@@ -65,4 +66,49 @@ const AnimatedGradiantText = ({text, variant}: { text: string, variant: string }
     )
 
     return variant === "light" ? variantLight : variant === "dark" ? variantDark : null;
+}
+
+const SlideUpSection = ({children, delay}: { children: JSX.Element, delay: number }) => {
+    return (
+        <div>
+            <div className="hidden md:flex">
+                <SlideUp delay={delay}>
+                    {children}
+                </SlideUp>
+            </div>
+            <div className="md:hidden">
+                {children}
+            </div>
+        </div>
+    )
+}
+
+const SlideLeftSection = ({children, delay}: { children: JSX.Element, delay: number }) => {
+    return (
+        <div>
+            <div className="hidden md:flex">
+                <SlideLeft delay={delay}>
+                    {children}
+                </SlideLeft>
+            </div>
+            <div className="md:hidden">
+                {children}
+            </div>
+        </div>
+    )
+}
+
+const FadeInSection = ({children, delay}: { children: JSX.Element, delay: number }) => {
+    return (
+        <div>
+            <div className="hidden md:flex">
+                <FadeIn delay={delay}>
+                    {children}
+                </FadeIn>
+            </div>
+            <div className="md:hidden">
+                {children}
+            </div>
+        </div>
+    )
 }

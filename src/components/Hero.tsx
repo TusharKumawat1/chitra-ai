@@ -12,7 +12,7 @@ import Link from "next/link";
 export default function Hero() {
     return (
         <div className="w-full">
-            <div className="hidden">
+            <div className="hidden md:inline-flex">
                 <Stars/>
             </div>
             <div
