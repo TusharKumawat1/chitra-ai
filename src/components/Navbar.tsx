@@ -13,30 +13,30 @@ export default function Navbar() {
             <div className="max-w-screen-2xl mx-auto px-4 md:px-12 py-8">
                 <nav className="flex justify-between items-center">
                     <div className="text-white text-xl md:text-4xl font-semibold">Chitra AI</div>
-                    <div className="hidden md:flex gap-12 text-base font-light lg:text-lg">
-                        <Link href={"/"}>Learn</Link>
-                        <Link href={"/"}>Build</Link>
-                        <Link href={"/"}>Products</Link>
-                        <Link href={"/"}>Community</Link>
-                    </div>
-                    <div className="md:hidden">
-                        <Sheet key="right">
-                            <SheetTrigger asChild>
-                                <button><HamburgerIcon /></button>
-                            </SheetTrigger>
-                            <SheetContent side="right" className="bg-[#181716] border-black">
-                                <SheetHeader>
-                                    <SheetTitle>Useful Links</SheetTitle>
-                                </SheetHeader>
-                                <div className="grid gap-4 py-4">
-                                    <Link href={"/"}>Learn</Link>
-                                    <Link href={"/"}>Build</Link>
-                                    <Link href={"/"}>Products</Link>
-                                    <Link href={"/"}>Community</Link>
-                                </div>
-                            </SheetContent>
-                        </Sheet>
-                    </div>
+                    {/*<div className="hidden md:flex gap-12 text-base font-light lg:text-lg">*/}
+                    {/*    <Link href={"/"}>Learn</Link>*/}
+                    {/*    <Link href={"/"}>Build</Link>*/}
+                    {/*    <Link href={"/"}>Products</Link>*/}
+                    {/*    <Link href={"/"}>Community</Link>*/}
+                    {/*</div>*/}
+                    {/*<div className="md:hidden">*/}
+                    {/*    <Sheet key="right">*/}
+                    {/*        <SheetTrigger asChild>*/}
+                    {/*            <button><HamburgerIcon /></button>*/}
+                    {/*        </SheetTrigger>*/}
+                    {/*        <SheetContent side="right" className="bg-[#181716] border-black">*/}
+                    {/*            <SheetHeader>*/}
+                    {/*                <SheetTitle>Useful Links</SheetTitle>*/}
+                    {/*            </SheetHeader>*/}
+                    {/*            <div className="grid gap-4 py-4">*/}
+                    {/*                <Link href={"/"}>Learn</Link>*/}
+                    {/*                <Link href={"/"}>Build</Link>*/}
+                    {/*                <Link href={"/"}>Products</Link>*/}
+                    {/*                <Link href={"/"}>Community</Link>*/}
+                    {/*            </div>*/}
+                    {/*        </SheetContent>*/}
+                    {/*    </Sheet>*/}
+                    {/*</div>*/}
                 </nav>
             </div>
         </div>

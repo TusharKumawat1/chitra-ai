@@ -1,5 +1,6 @@
 import {FadeIn, SlideLeft, SlideUp} from "@/animations/animations";
 import React from "react";
+import Link from "next/link";
 
 export default function Community() {
     return (
@@ -24,12 +25,19 @@ export default function Community() {
                                 spark inspiration by providing pre-made prompts and styles
                             </p>
                             <div className="flex justify-between bg-[#0A0A0A] rounded-3xl">
-                                <input type="text"
-                                       className="bg-transparent py-4 px-8 w-full font-light text-sm focus:outline-none"
-                                       placeholder="Write Prompt To Generate Image"/>
-                                <button className="bg-[#D2FF3A] text-sm text-black py-2 px-4 m-1 rounded-3xl">Generate
-                                </button>
+                                {/*<input type="text"*/}
+                                {/*       className="bg-transparent py-4 px-8 w-full font-light text-sm focus:outline-none"*/}
+                                {/*       placeholder="Write Prompt To Generate Image"/>*/}
+                                {/*<button className="bg-[#D2FF3A] text-sm text-black py-2 px-4 m-1 rounded-3xl">Generate*/}
+                                {/*</button>*/}
+
                             </div>
+                            <Link href={"https://instaphotoai.com"} target="_blank">
+                                <button
+                                    className="bg-[#D2FF3A] text-black lg:text-xl font-semibold px-8 py-4 rounded-xl">
+                                    Try our latest app
+                                </button>
+                            </Link>
                         </div>
                     </SlideUpSection>
                 </div>
