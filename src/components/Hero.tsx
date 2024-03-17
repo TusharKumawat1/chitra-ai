@@ -5,41 +5,40 @@ import frame from "../../public/frame.png"
 import girlWithFrame from "../../public/girlWithFrame.png"
 import girlWithFrameMobile2 from "../../public/girlWithFrameMobile2.png"
 import React from "react";
-import Stars from "@/components/Stars";
 import {FadeIn, SlideLeft, SlideUp} from "@/animations/animations";
 import Link from "next/link";
+import {TextGenerateEffect} from "@/components/ui/text-generator-effect";
 
 export default function Hero() {
     return (
         <div className="w-full">
-            <div className="hidden md:inline-flex">
-                <Stars/>
-            </div>
             <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-screen-2xl mx-auto px-4 md:px-12 h-full xl:my-12">
-                <Image className="md:hidden" src={girlWithFrameMobile2} alt={"image"} />
+                <Image className="md:hidden" src={girlWithFrameMobile2} alt={"image"}/>
                 <div className="col-span-1 md:col-span-1 z-10 md:py-8 flex flex-col justify-center">
-                    <FadeInSection>
-                        <div>
-                            <div className="flex flex-col text-left mb-4 lg:mb-8 xl:mb-12">
-                                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">Simple, Freemium</h1>
-                                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">Image & Video
-                                    Generation</h1>
-                                <div className="flex gap-2 lg:gap-4">
-                                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">
-                                        <AnimatedGradiantText variant="dark" text="within seconds"/>
-                                    </h1>
-                                </div>
+                    <div className="flex flex-col text-left mb-4 lg:mb-8 xl:mb-12">
+                        <TextGenerateEffect className="text-4xl lg:text-5xl xl:text-6xl font-medium"
+                                            words="Simple, Freemium Image & Video Generation"
+                        />
+                        <TextGenerateEffect className="text-4xl lg:text-5xl xl:text-6xl font-medium"
+                                            words=""
+                        />
+                        <FadeInSection delay={1.4}>
+                            <div className="flex gap-2 lg:gap-4">
+                                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">
+                                    <AnimatedGradiantText variant="dark" text="within seconds"/>
+                                </h1>
                             </div>
-                            <div className="mb-16 lg:mb-24 xl:mb-24">
-                                <p className="text-white max-w-[80%] md:max-w-[60%] font-extralight text-sm lg:text-base">
-                                    In the realm of creativity, technology has become a powerful ally for artists,
-                                    writers, designers, and creators of all kinds. Artificially intelligent (AI) tools
-                                    have emerged as valuable companions, assisting naturally creative humans in their
-                                    creative processes.
-                                </p>
-
-                            </div>
+                        </FadeInSection>
+                    </div>
+                    <FadeInSection delay={1.8}>
+                        <div className="mb-16 lg:mb-24 xl:mb-24">
+                            <p className="text-white max-w-[80%] md:max-w-[60%] font-extralight text-sm lg:text-base">
+                                In the realm of creativity, technology has become a powerful ally for artists,
+                                writers, designers, and creators of all kinds. Artificially intelligent (AI) tools
+                                have emerged as valuable companions, assisting naturally creative humans in their
+                                creative processes.
+                            </p>
                         </div>
                     </FadeInSection>
                     <SlideUpSection>
@@ -60,22 +59,22 @@ export default function Hero() {
                     </SlideUpSection>
                 </div>
                 <SlideLeftSection>
-                        <div className="hidden md:inline-flex col-span-1 md:col-span-1">
-                            <div className="hidden md:inline-flex my-auto mx-auto">
-                                <Box completeImage={true}/>
-                            </div>
+                    <div className="hidden md:inline-flex col-span-1 md:col-span-1">
+                        <div className="hidden md:inline-flex my-auto mx-auto">
+                            <Box completeImage={true}/>
                         </div>
+                    </div>
                 </SlideLeftSection>
             </div>
         </div>
     );
 }
 
-const FadeInSection = ({children}: { children: JSX.Element }) => {
+const FadeInSection = ({children, delay}: { children: JSX.Element, delay: number }) => {
     return (
         <div>
             <div className="hidden md:flex">
-                <FadeIn delay={0.2}>
+                <FadeIn delay={delay}>
                     {children}
                 </FadeIn>
             </div>
