@@ -7,7 +7,7 @@ type config = {
     visible: {opacity?: number, x?: number, y?: number},
 };
 
-export default function Base({children, variants, delay, width="full"}: {
+export default function Base({children, variants, delay, width="100%"}: {
     children: JSX.Element,
     variants: config,
     delay: number,
