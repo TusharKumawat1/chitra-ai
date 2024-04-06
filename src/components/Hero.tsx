@@ -5,28 +5,28 @@ import frame from "../../public/frame.png"
 import girlWithFrame from "../../public/girlWithFrame.png"
 import girlWithFrameMobile2 from "../../public/girlWithFrameMobile2.png"
 import React from "react";
-import {FadeIn, SlideLeft, SlideUp} from "@/animations/animations";
+import { FadeIn, SlideLeft, SlideUp } from "@/animations/animations";
 import Link from "next/link";
-import {TextGenerateEffect} from "@/components/ui/text-generator-effect";
+import { TextGenerateEffect } from "@/components/ui/text-generator-effect";
 
 export default function Hero() {
     return (
         <div className="w-full">
             <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-screen-2xl mx-auto px-4 md:px-12 h-full xl:my-12">
-                <Image className="md:hidden" src={girlWithFrameMobile2} alt={"image"}/>
+                <Image className="md:hidden" src={girlWithFrameMobile2} alt={"image"} />
                 <div className="col-span-1 md:col-span-1 z-10 md:py-8 flex flex-col justify-center">
                     <div className="flex flex-col text-left mb-4 lg:mb-8 xl:mb-12">
                         <TextGenerateEffect className="text-4xl lg:text-5xl xl:text-6xl font-medium"
-                                            words="Simple, Freemium Image & Video Generation"
+                            words="Simple, Freemium Image & Video Generation"
                         />
                         <TextGenerateEffect className="text-4xl lg:text-5xl xl:text-6xl font-medium"
-                                            words=""
+                            words=""
                         />
                         <FadeInSection delay={1.4}>
                             <div className="flex gap-2 lg:gap-4">
                                 <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium">
-                                    <AnimatedGradiantText variant="dark" text="within seconds"/>
+                                    <AnimatedGradiantText variant="dark" text="within seconds" />
                                 </h1>
                             </div>
                         </FadeInSection>
@@ -44,8 +44,8 @@ export default function Hero() {
                     <SlideUpSection>
                         <div>
                             <div className="mb-2 lg:mb-8">
-                                <AnimatedGradiantText variant="light" text="Create Your Photo with Chitra AI"/>
-                                <AnimatedGradiantText variant="light" text="Always Free AI tools with 100% Privacy"/>
+                                <AnimatedGradiantText variant="light" text="Create Your Photo with Chitra AI" />
+                                <AnimatedGradiantText variant="light" text="Always Free AI tools with 100% Privacy" />
                             </div>
                             <div>
                                 <Link href={"https://instaphotoai.com"} target="_blank">
@@ -61,7 +61,7 @@ export default function Hero() {
                 <SlideLeftSection>
                     <div className="hidden md:inline-flex col-span-1 md:col-span-1">
                         <div className="hidden md:inline-flex my-auto mx-auto">
-                            <Box completeImage={true}/>
+                            <Box completeImage={true} />
                         </div>
                     </div>
                 </SlideLeftSection>
@@ -70,7 +70,7 @@ export default function Hero() {
     );
 }
 
-const FadeInSection = ({children, delay}: { children: JSX.Element, delay: number }) => {
+const FadeInSection = ({ children, delay }: { children: JSX.Element, delay: number }) => {
     return (
         <div>
             <div className="hidden md:flex">
@@ -85,7 +85,7 @@ const FadeInSection = ({children, delay}: { children: JSX.Element, delay: number
     )
 };
 
-const SlideUpSection = ({children}: { children: JSX.Element }) => {
+const SlideUpSection = ({ children }: { children: JSX.Element }) => {
     return (
         <div>
             <div className="hidden md:flex">
@@ -100,7 +100,7 @@ const SlideUpSection = ({children}: { children: JSX.Element }) => {
     )
 }
 
-const SlideLeftSection = ({children}: { children: JSX.Element }) => {
+const SlideLeftSection = ({ children }: { children: JSX.Element }) => {
     return (
         <div>
             <div className="hidden md:flex">
@@ -115,7 +115,7 @@ const SlideLeftSection = ({children}: { children: JSX.Element }) => {
     )
 }
 
-const AnimatedGradiantText = ({text, variant}: { text: string, variant: string }) => {
+const AnimatedGradiantText = ({ text, variant }: { text: string, variant: string }) => {
     const variantDark = (
         <p className="text-4xl lg:text-5xl xl:text-6xl font-medium bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.400),theme(colors.indigo.400),theme(colors.fuchsia.400),theme(colors.indigo.200),theme(colors.indigo.400),theme(colors.indigo.600))] bg-[length:200%_auto] animate-gradient">{text}</p>
     )
@@ -126,15 +126,15 @@ const AnimatedGradiantText = ({text, variant}: { text: string, variant: string }
     return variant === "light" ? variantLight : variant === "dark" ? variantDark : null;
 }
 
-const Box = ({completeImage}: { completeImage: Boolean }) => {
+const Box = ({ completeImage }: { completeImage: Boolean }) => {
     const completeBox = (
-        <Image className="scale-[1.30] lg:scale-[1.22] -ml-[6%]" src={girlWithFrame} alt={"girlWithFrame"}/>
+        <Image className="scale-[1.30] lg:scale-[1.22] -ml-[6%]" src={girlWithFrame} alt={"girlWithFrame"} />
     )
 
     const distributedBox = (
         <div className="pl-[50%] h-full">
-            <Image className="z-0" src={frame} alt={"frame"}/>
-            <Image className="z-10 -mt-[140%] -ml-[50%] scale-[2.26]" src={girl} alt={"girl"}/>
+            <Image className="z-0" src={frame} alt={"frame"} />
+            <Image className="z-10 -mt-[140%] -ml-[50%] scale-[2.26]" src={girl} alt={"girl"} />
         </div>
     );
 

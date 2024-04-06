@@ -29,7 +29,7 @@ export default function Hero2() {
                             </SlideDownSection>
                             <div className="xl:-ml-[25%]">
                                 <SlideUpSection delay={0.8}>
-                                    <div className="h-40 z-10 bg-[#6843EC] p-4 rounded-3xl">
+                                    <div className="h-40 z-10 p-4 rounded-3xl bg-gradient-to-b from-[#6843EC] to-[#000000]">
                                         <h1 className="text-2xl ml-4 mb-4 xl:w-full">We have the best AI Image generator</h1>
                                         <div className="flex items-center ml-4">
                                             <Image className="mr-4" src={UsersAvatarPhoto} alt="UserAvatar" />
@@ -50,7 +50,7 @@ export default function Hero2() {
                             </div>
                         </SlideLeftSection>
                         <SlideUpSection delay={1.4}>
-                            <button className="h-20 text-black w-full text-3xl bg-[#D2FF3A] rounded-3xl hover:bg-[#bde04b]">
+                            <button className="h-20 text-black w-full text-3xl bg-gradient-to-b from-[#d5ff4c] to-[#4d6500] rounded-3xl hover:from-[#c3e848] hover:to-[#40500e]">
                                 <div className="flex justify-center items-center font-[600]">
                                     Try Free
                                     <GoArrowUpRight />
