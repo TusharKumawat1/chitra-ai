@@ -1,9 +1,12 @@
 import Link from "next/link";
-import { TfiLocationPin } from "react-icons/tfi";
+// import { TfiLocationPin } from "react-icons/tfi";
 import { TbPhoneFilled } from "react-icons/tb";
-import { TfiEmail } from "react-icons/tfi";
-import { TfiInstagram } from "react-icons/tfi";
+// import { TfiEmail } from "react-icons/tfi";
+// import { TfiInstagram } from "react-icons/tfi";
 import { SlideDown, SlideLeft, SlideRight, SlideUp } from "@/animations/animations";
+import { IoLocationSharp } from "react-icons/io5";
+import { IoMdMail } from "react-icons/io";  
+import { RiInstagramFill } from "react-icons/ri";
 
 
 export default function Footer() {
@@ -15,7 +18,7 @@ export default function Footer() {
                         <SlideRightSection delay={0}>
                             <h1 className="text-2xl font-medium mb-8">Chitra AI</h1>
                         </SlideRightSection>
-                        <SlideDownSection delay={0.2}>
+                        <SlideDownSection delay={0.3}>
                             <p className="text-sm max-w-[400px] text-left">
                                 Try our apps today and use in your Instagram, LinkedIn, Facebook, Blogs and Marketing
                                 Campaign. Boost your social networking and media by AI generated beautiful photos.
@@ -28,10 +31,10 @@ export default function Footer() {
                         <SlideLeftSection delay={0}>
                             <h1 className="text-2xl font-medium mb-8">Contact Info</h1>
                         </SlideLeftSection>
-                        <SlideDownSection delay={0.2}>
+                        <SlideDownSection delay={0.3}>
                             <div className="text-left cursor-pointer">
                                 <div className="group flex gap-2 items-center h-6 mb-1">
-                                    <TfiLocationPin className="group-hover:text-[#b048ff]" />
+                                    <IoLocationSharp className="group-hover:text-[#b048ff]" />
                                     <Link target="_blank" href="https://maps.app.goo.gl/z8ytwXyXQQTz3k5U7"><GradiantTextOnHover variant="dark" text="1st Block, Jayanagar, Bengaluru" /></Link>
                                 </div>
                                 <div className="group flex gap-2 items-center h-6 mb-1">
@@ -39,11 +42,11 @@ export default function Footer() {
                                     <Link target="_blank" href={"tel:+91 7093003840"}><GradiantTextOnHover variant="dark" text="+91 7093003840" /></Link>
                                 </div>
                                 <div className="group flex gap-2 items-center h-6 mb-1">
-                                    <TfiEmail className="group-hover:text-[#b048ff]" />
+                                    <IoMdMail className="group-hover:text-[#b048ff]" />
                                     <Link target="_blank" href={'mailto:connect@instaphotoai.com'}><GradiantTextOnHover variant="dark" text="connect@instaphotoai.com" /></Link>
                                 </div>
                                 <div className="group flex gap-2 items-center h-6">
-                                    <TfiInstagram className="group-hover:text-[#b048ff]" />
+                                    <RiInstagramFill className="group-hover:text-[#b048ff]" />
                                     <Link target="_blank" href={'https://www.instagram.com/chitra_ai/'}><GradiantTextOnHover variant="dark" text="@chitra_ai" /></Link>
                                 </div>
                             </div>
@@ -51,7 +54,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="container mx-auto">
-                    <SlideUpSection delay={0.4}>
+                    <SlideUpSection delay={0.6}>
                         <p>&copy; {new Date().getFullYear()} Chitra AI. All Rights Reserved.</p>
                     </SlideUpSection>
                 </div>

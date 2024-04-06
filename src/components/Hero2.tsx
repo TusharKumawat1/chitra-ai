@@ -33,7 +33,7 @@ export default function Hero2() {
                                         <h1 className="text-2xl ml-4 mb-4 xl:w-full">We have the best AI Image generator</h1>
                                         <div className="flex items-center ml-4">
                                             <Image className="mr-4" src={UsersAvatarPhoto} alt="UserAvatar" />
-                                            <div className="font-light text-sm">
+                                            <div className="font-light text-xs xs:text-sm">
                                                 <p>Join our Community.</p>
                                                 <p>We are waiting for you.</p>
                                             </div>
