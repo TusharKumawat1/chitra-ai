@@ -1,11 +1,12 @@
-import {FadeIn, SlideLeft, SlideUp} from "@/animations/animations";
+import { FadeIn, SlideLeft, SlideUp } from "@/animations/animations";
 import React from "react";
 import Link from "next/link";
+import { CountIncreaseEffect } from "./ui/count-increase-effect";
 
 export default function Community() {
     return (
         <div className="w-full md:my-24">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-32 max-w-screen-2xl mx-auto px-4 md:px-24 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-screen-2xl mx-auto px-4 md:px-10 py-12">
                 <div className="col-span-1 px-4 md:p-8 z-10">
                     <FadeInSection delay={0.25}>
                         <div>
@@ -41,19 +42,19 @@ export default function Community() {
                         </div>
                     </SlideUpSection>
                 </div>
-                <div className="col-span-1 p-8 mx-auto my-auto z-10">
+                <div className="col-span-1 p-4 sm:p-8 mx-auto my-auto z-10">
                     <SlideLeftSection delay={0.75}>
                         <div>
                             <div className="mb-8">
-                                <AnimatedGradiantText text="10,000+" variant="dark"/>
+                                <AnimatedGradiantText text="10000" variant="dark" />
                                 <p className="font-extralight text-sm">ACTIVE ACCOUNTS</p>
                             </div>
                             <div className="mb-8">
-                                <AnimatedGradiantText text="50,000+" variant="dark"/>
+                                <AnimatedGradiantText text="50000" variant="dark" />
                                 <p className="font-extralight text-sm">IMAGES GENERATED</p>
                             </div>
                             <div>
-                                <AnimatedGradiantText text="100+" variant="dark"/>
+                                <AnimatedGradiantText text="100" variant="dark" />
                                 <p className="font-extralight text-sm">PRE-MADE STYLES</p>
                             </div>
                         </div>
@@ -64,9 +65,11 @@ export default function Community() {
     )
 }
 
-const AnimatedGradiantText = ({text, variant}: { text: string, variant: string }) => {
+const AnimatedGradiantText = ({ text, variant }: { text: string, variant: string }) => {
+
     const variantDark = (
-        <p className="text-6xl md:text-7xl font-medium bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.600),theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.green.400),theme(colors.sky.400),theme(colors.indigo.100),theme(colors.indigo.400))] bg-[length:200%_auto] animate-gradient">{text}
+        <p className="text-6xl md:text-7xl font-medium bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.600),theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.green.400),theme(colors.sky.400),theme(colors.indigo.100),theme(colors.indigo.400))] bg-[length:200%_auto] animate-gradient">
+            <CountIncreaseEffect text={+text} duration={3} />+
         </p>
     )
     const variantLight = (
@@ -76,7 +79,7 @@ const AnimatedGradiantText = ({text, variant}: { text: string, variant: string }
     return variant === "light" ? variantLight : variant === "dark" ? variantDark : null;
 }
 
-const SlideUpSection = ({children, delay}: { children: JSX.Element, delay: number }) => {
+const SlideUpSection = ({ children, delay }: { children: JSX.Element, delay: number }) => {
     return (
         <div>
             <div className="hidden md:flex">
@@ -91,7 +94,7 @@ const SlideUpSection = ({children, delay}: { children: JSX.Element, delay: numbe
     )
 }
 
-const SlideLeftSection = ({children, delay}: { children: JSX.Element, delay: number }) => {
+const SlideLeftSection = ({ children, delay }: { children: JSX.Element, delay: number }) => {
     return (
         <div>
             <div className="hidden md:flex">
@@ -106,7 +109,7 @@ const SlideLeftSection = ({children, delay}: { children: JSX.Element, delay: num
     )
 }
 
-const FadeInSection = ({children, delay}: { children: JSX.Element, delay: number }) => {
+const FadeInSection = ({ children, delay }: { children: JSX.Element, delay: number }) => {
     return (
         <div>
             <div className="hidden md:flex">
