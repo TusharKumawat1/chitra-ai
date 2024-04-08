@@ -69,7 +69,7 @@ const AnimatedGradiantText = ({ text, variant }: { text: string, variant: string
 
     const variantDark = (
         <p className="text-6xl md:text-7xl font-medium bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.600),theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.green.400),theme(colors.sky.400),theme(colors.indigo.100),theme(colors.indigo.400))] bg-[length:200%_auto] animate-gradient">
-            <CountIncreaseEffect text={+text} duration={5} />+
+            <CountIncreaseEffect text={+text} duration={3} />+
         </p>
     )
     const variantLight = (
