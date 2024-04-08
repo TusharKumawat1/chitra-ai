@@ -1,8 +1,5 @@
 import Link from "next/link";
-// import { TfiLocationPin } from "react-icons/tfi";
 import { TbPhoneFilled } from "react-icons/tb";
-// import { TfiEmail } from "react-icons/tfi";
-// import { TfiInstagram } from "react-icons/tfi";
 import { SlideDown, SlideLeft, SlideRight, SlideUp } from "@/animations/animations";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";  
