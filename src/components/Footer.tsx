@@ -40,7 +40,7 @@ export default function Footer() {
                                 </div>
                                 <div className="group flex gap-2 items-center h-6 mb-1">
                                     <IoMdMail className="group-hover:text-[#b048ff]" />
-                                    <Link target="_blank" href={'mailto:connect@instaphotoai.com'}><GradiantTextOnHover variant="dark" text="connect@instaphotoai.com" /></Link>
+                                    <Link target="_blank" href={'mailto:connect@chitraAI.com.com'}><GradiantTextOnHover variant="dark" text="connect@chitraAI.com" /></Link>
                                 </div>
                                 <div className="group flex gap-2 items-center h-6">
                                     <RiInstagramFill className="group-hover:text-[#b048ff]" />
@@ -53,6 +53,7 @@ export default function Footer() {
                 <div className="container mx-auto">
                     <SlideUpSection delay={0.6}>
                         <p>&copy; {new Date().getFullYear()} Chitra AI. All Rights Reserved.</p>
+                        <p>by Thriving Journey Pvt Ltd</p>
                     </SlideUpSection>
                 </div>
             </div>
