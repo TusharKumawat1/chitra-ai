@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { TbPhoneFilled } from "react-icons/tb";
-import { SlideDown, SlideLeft, SlideRight, SlideUp } from "@/animations/animations";
-import { IoLocationSharp } from "react-icons/io5";
-import { IoMdMail } from "react-icons/io";  
-import { RiInstagramFill } from "react-icons/ri";
+import {TbPhoneFilled} from "react-icons/tb";
+import {SlideDown, SlideLeft, SlideRight, SlideUp} from "@/animations/animations";
+import {IoLocationSharp} from "react-icons/io5";
+import {IoMdMail} from "react-icons/io";
+import {RiInstagramFill} from "react-icons/ri";
 
 
 export default function Footer() {
@@ -31,20 +31,26 @@ export default function Footer() {
                         <SlideDownSection delay={0.3}>
                             <div className="text-left cursor-pointer">
                                 <div className="group flex gap-2 items-center h-6 mb-1">
-                                    <IoLocationSharp className="group-hover:text-[#b048ff]" />
-                                    <Link target="_blank" href="https://maps.app.goo.gl/z8ytwXyXQQTz3k5U7"><GradiantTextOnHover variant="dark" text="1st Block, Jayanagar, Bengaluru" /></Link>
+                                    <IoLocationSharp className="group-hover:text-[#b048ff]"/>
+                                    <Link target="_blank"
+                                          href="https://maps.app.goo.gl/z8ytwXyXQQTz3k5U7"><GradiantTextOnHover
+                                        variant="dark" text="1st Block, Jayanagar, Bengaluru"/></Link>
                                 </div>
                                 <div className="group flex gap-2 items-center h-6 mb-1">
-                                    <TbPhoneFilled className="group-hover:text-[#b048ff]" />
-                                    <Link target="_blank" href={"tel:+91 7093003840"}><GradiantTextOnHover variant="dark" text="+91 7093003840" /></Link>
+                                    <TbPhoneFilled className="group-hover:text-[#b048ff]"/>
+                                    <Link target="_blank" href={"tel:+91 7093003840"}><GradiantTextOnHover
+                                        variant="dark" text="+91 7093003840"/></Link>
                                 </div>
                                 <div className="group flex gap-2 items-center h-6 mb-1">
-                                    <IoMdMail className="group-hover:text-[#b048ff]" />
-                                    <Link target="_blank" href={'mailto:connect@chitraAI.com.com'}><GradiantTextOnHover variant="dark" text="connect@chitraAI.com" /></Link>
+                                    <IoMdMail className="group-hover:text-[#b048ff]"/>
+                                    <Link target="_blank" href={'mailto:connect@chitraAI.com.com'}><GradiantTextOnHover
+                                        variant="dark" text="connect@chitraAI.com"/></Link>
                                 </div>
                                 <div className="group flex gap-2 items-center h-6">
-                                    <RiInstagramFill className="group-hover:text-[#b048ff]" />
-                                    <Link target="_blank" href={'https://www.instagram.com/chitra_ai/'}><GradiantTextOnHover variant="dark" text="@chitra_ai" /></Link>
+                                    <RiInstagramFill className="group-hover:text-[#b048ff]"/>
+                                    <Link target="_blank"
+                                          href={'https://www.instagram.com/chitra_ai/'}><GradiantTextOnHover
+                                        variant="dark" text="@chitra_ai"/></Link>
                                 </div>
                             </div>
                         </SlideDownSection>
@@ -52,8 +58,10 @@ export default function Footer() {
                 </div>
                 <div className="container mx-auto">
                     <SlideUpSection delay={0.6}>
-                        <p>&copy; {new Date().getFullYear()} Chitra AI. All Rights Reserved.</p>
-                        <p>by Thriving Journey Pvt Ltd</p>
+                        <div>
+                            <p>&copy; {new Date().getFullYear()} Chitra AI. All Rights Reserved.</p>
+                            <p>by Thriving Journey Pvt Ltd</p>
+                        </div>
                     </SlideUpSection>
                 </div>
             </div>
@@ -61,7 +69,7 @@ export default function Footer() {
     )
 }
 
-const GradiantTextOnHover = ({ text, variant }: { text: string, variant: string }) => {
+const GradiantTextOnHover = ({text, variant}: { text: string, variant: string }) => {
     const variantDark = (
         <p className="group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.400),theme(colors.indigo.400),theme(colors.fuchsia.400),theme(colors.indigo.200),theme(colors.indigo.400),theme(colors.indigo.600))] group-hover:bg-[length:200%_auto] group-hover:animate-gradient">{text}</p>
     )
@@ -72,7 +80,7 @@ const GradiantTextOnHover = ({ text, variant }: { text: string, variant: string 
     return variant === "light" ? variantLight : variant === "dark" ? variantDark : null;
 }
 
-const SlideLeftSection = ({ children, delay }: { children: JSX.Element, delay: number }) => {
+const SlideLeftSection = ({children, delay}: { children: JSX.Element, delay: number }) => {
     return (
         <div>
             <div className="hidden md:flex">
@@ -87,7 +95,7 @@ const SlideLeftSection = ({ children, delay }: { children: JSX.Element, delay: n
     )
 }
 
-const SlideRightSection = ({ children, delay }: { children: JSX.Element, delay: number }) => {
+const SlideRightSection = ({children, delay}: { children: JSX.Element, delay: number }) => {
     return (
         <div>
             <div className="hidden md:flex">
@@ -102,7 +110,7 @@ const SlideRightSection = ({ children, delay }: { children: JSX.Element, delay: 
     )
 }
 
-const SlideUpSection = ({ children, delay }: { children: JSX.Element, delay: number }) => {
+const SlideUpSection = ({children, delay}: { children: JSX.Element, delay: number }) => {
     return (
         <div>
             <div className="hidden md:flex">
@@ -117,7 +125,7 @@ const SlideUpSection = ({ children, delay }: { children: JSX.Element, delay: num
     )
 }
 
-const SlideDownSection = ({ children, delay }: { children: JSX.Element, delay: number }) => {
+const SlideDownSection = ({children, delay}: { children: JSX.Element, delay: number }) => {
     return (
         <div>
             <div className="hidden md:flex">
