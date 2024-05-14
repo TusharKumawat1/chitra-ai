@@ -51,10 +51,10 @@ export default function Hero2() {
                         </SlideLeftSection>
                         <SlideUpSection delay={1.4}>
                             <button className="h-20 text-black w-full text-3xl bg-gradient-to-b from-[#d5ff4c] to-[#4d6500] rounded-3xl hover:from-[#c3e848] hover:to-[#40500e]">
-                                <div className="flex justify-center items-center font-[600]">
+                                <a href="https://Rainforest.zone" className="flex justify-center items-center font-[600]">
                                     Try Free
                                     <GoArrowUpRight />
-                                </div>
+                                </a>
                             </button>
                         </SlideUpSection>
                     </div>
